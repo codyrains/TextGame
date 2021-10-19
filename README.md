@@ -1,1 +1,1 @@
-# TextGame
+This is a text-based adventure game that utilizes C# to take the user through a fun D&D styled adventure.
