@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CocoTextAdventureGameOfTheYearAddition/1.0.0": {
+        "runtime": {
+          "CocoTextAdventureGameOfTheYearAddition.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CocoTextAdventureGameOfTheYearAddition/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
