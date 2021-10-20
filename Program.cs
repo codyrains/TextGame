@@ -63,6 +63,29 @@ namespace CocoTextAdventureGameOfTheYearAddition
                         second();
                         break;
                     }
+
+                case "3":
+                case "Pee a little":
+                case "pee":
+                    {
+                        Console.WriteLine("You pee your pants a little, but not too much for anyone to notice");
+                        Console.WriteLine("Your face begins to blush, projecting a soft pink hue.");
+                        Console.WriteLine("The man yells 'Well? What are you waiting for? My Birfday's tonight and I want to get dizzy off dis ale!'");
+                        Console.WriteLine("You decide to take your L, as you agree to get up and move to a different table.");
+                        Console.WriteLine("As you find a new place to sit, you hear the man scream 'Oi! Why is meh seat wet?'");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ReadLine();
+                        second();
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("I don't understand that command...");
+                        Console.WriteLine("Press 'Enter' to try again.");
+                        Console.ReadLine();
+                        first();
+                        break;
+                    }
             }
         }
 
