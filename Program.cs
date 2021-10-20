@@ -43,9 +43,24 @@ namespace CocoTextAdventureGameOfTheYearAddition
                         Console.WriteLine("The rest of the crowd in the tavern pause in silence for a moment, until you are surprised with a roar of cheering! Those cheers are shortly followed up with a few brawls spread out through the tavern. Looks like you know how to get the people going!");
                         Console.WriteLine("The Barkeep of the tavern comes over to investigate the source of the original dispute.");
                         Console.WriteLine("When he sees the man knocked out cold, he grabs your hand, and raises it to the ceiling!");
+                        Console.WriteLine("You are offered free drinks for the rest of the night, and decide to take the barkeep up on his offer.");
                         Console.WriteLine("Press enter to continue");
                         Console.ReadLine();
                         gameOver();
+                        break;
+                    }
+                case "2":
+                case "blow his mind with magic":
+                case "magic":
+                    {
+                        Console.WriteLine("You snap your fingers, creating a small burst of flame that sprouts from the tip of whatever finger you wish.");
+                        Console.WriteLine("The man looks at you in awe, and says 'Oooooo' followed with an 'Ahhhhhhh'. Looks like he has never seen anything like this before.");
+                        Console.WriteLine("'Can you teach me how to do that?' he asks.");
+                        Console.WriteLine("You respond with a strong 'No' without breaking eye contact.");
+                        Console.WriteLine("The mans face immediately sours up, as he walks away mumbling profanity under his breath.");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ReadLine();
+                        second();
                         break;
                     }
             }
