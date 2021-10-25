@@ -23,7 +23,8 @@ namespace CocoTextAdventureGameOfTheYearAddition
         {
             string choice;
 
-            Console.WriteLine("You wake up in a tavern, clueless of the time, with a large man hovering over you. 'This is my table, and you're sitting in my seat!' he says, as spit flies out of his mouth and onto your cheek.");
+            Console.WriteLine("You wake up in a tavern, clueless of the time, with a large man hovering over you.");
+            Console.WriteLine("'This is my table, and you're sitting in my seat!' he says, as spit flies out of his mouth and onto your cheek.");
             Console.WriteLine("What do you do?");
             Console.WriteLine("1. Punch him right in the kisser.");
             Console.WriteLine("2. Blow his mind with a magic display.'");
@@ -40,7 +41,8 @@ namespace CocoTextAdventureGameOfTheYearAddition
                 case "punch":
                     {
                         Console.WriteLine("You swing your fist at the drunkards face with a left hook that would even impress the likes of the great Sir Muhammad Ali himself!");
-                        Console.WriteLine("The rest of the crowd in the tavern pause in silence for a moment, until you are surprised with a roar of cheering! Those cheers are shortly followed up with a few brawls spread out through the tavern. Looks like you know how to get the people going!");
+                        Console.WriteLine("The rest of the crowd in the tavern pause in silence for a moment, until you are surprised with a roar of cheering!");
+                        Console.WriteLine("Those cheers are shortly followed up with a few brawls spread out through the tavern. Looks like you know how to get the people going!");
                         Console.WriteLine("The Barkeep of the tavern comes over to investigate the source of the original dispute.");
                         Console.WriteLine("When he sees the man knocked out cold, he grabs your hand, and raises it to the ceiling!");
                         Console.WriteLine("You are offered free drinks for the rest of the night, and decide to take the barkeep up on his offer.");
@@ -91,23 +93,104 @@ namespace CocoTextAdventureGameOfTheYearAddition
 
         public static void second()
         {
+            Random rnd = new Random();
+            string[] secOptions = {"On your way to find a new place to sit, you see a drunk man obnoxiously singing a song at a table. There is one extra seat across from him.",
+            "On your way to find a new place to sit, you see a man in a shadowy robe at a table all by himself. There is one extra seat across from him.",
+            "On your way to find a new place to sit, you see a small dwarf fiddling with his belongings. There is one extra seat across from him."};
+            int randomNumber = rnd.Next(0, 3);
+            string secText = secOptions[randomNumber];
+
+            string secChoice;
+
+            Console.WriteLine(secText);
+            Console.WriteLine("Do you sit at the table? Yes or No?");
+            Console.WriteLine("Choice: ");
+            secChoice = Console.ReadLine().ToLower();
+
+            if (secChoice == "yes" || secChoice == "y")
+            {
+                third();
+            }
+            else if (secChoice == "no" || secChoice == "n")
+            {
+                Console.WriteLine("You decide to leave the area to avoid anymore disruption and head upstairs to your room.");
+                Console.WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+                gameOver();
+            }
+            else
+            {
+                Console.WriteLine("I don't understand that command...");
+                Console.WriteLine("Press 'Enter' to try again.");
+                Console.ReadLine();
+                second();
+            }
 
         }
 
         public static void third()
         {
+            int age;
 
+            Console.WriteLine("You sit down at the table. Your seat is a little wobbly but it'll get the job done!");
+            Console.WriteLine("They look you in the eyes as if they are surprised that someone wanted to sit with them.");
+            Console.WriteLine("How old are you?");
+            Console.Write("Age: ");
+            int.TryParse(Console.ReadLine(), out age);
+
+            while (age < 21)
+            {
+                Console.WriteLine("Uh...I'm no snitch but I'm pretty sure you need to be at least 21 to get into a tavern...");
+                Console.WriteLine("How old are you? (It's a video game you can lie so we can get to the good part)");
+                Console.Write("Age: ");
+                int.TryParse(Console.ReadLine(), out age);
+            }
+
+            string secChoice;
+
+            Console.WriteLine("'Fantastic!' they say. 'Would you care to have my extra drink and join me for a game of dice?' Yes or No.");
+            Console.WriteLine("Choice: ");
+            secChoice = Console.ReadLine().ToLower();
+
+            if (secChoice == "yes" || secChoice == "y")
+            {
+                // dice game method here
+            }
+            else if (secChoice == "no" || secChoice == "n")
+            {
+                Console.WriteLine("You decide to leave the area to avoid anymore disruption and head upstairs to your room.");
+                Console.WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+                gameOver();
+            }
+            else
+            {
+                Console.WriteLine("I don't understand that command...");
+                Console.WriteLine("Press 'Enter' to try again.");
+                Console.ReadLine();
+                second();
+            }
         }
 
         public static void gameOver()
         {
-
+            Console.Clear();
+            Console.WriteLine("After a long night of random interactions, conversations, and a few too many drinks, you decide to close your eyes for a well deserved nights sleep.");
+            Console.WriteLine("Until next time, adventurer!");
+            Console.WriteLine("Press 'Enter' to play again.");
+            Console.ReadLine();
+            Console.Clear();
+            gameTitle();
         }
 
         public static void youWin()
         {
 
         }
+
+    }
+    class Dice
+    {
 
     }
 }
