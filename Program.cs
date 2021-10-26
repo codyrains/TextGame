@@ -185,7 +185,14 @@ namespace CocoTextAdventureGameOfTheYearAddition
 
         public static void youWin()
         {
-
+            Console.Clear();
+            Console.WriteLine("You enjoy the rest of your night and you make some friends along the way.");
+            Console.WriteLine("You decide to go to your room for some well deserved sleep.");
+            Console.WriteLine("Until next time, adventurer!");
+            Console.WriteLine("Press 'Enter' to play again.");
+            Console.ReadLine();
+            Console.Clear();
+            gameTitle();
         }
 
     }
