@@ -2,7 +2,7 @@
 
 namespace CocoTextAdventureGameOfTheYearAddition
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -27,7 +27,7 @@ namespace CocoTextAdventureGameOfTheYearAddition
             Console.WriteLine("'This is my table, and you're sitting in my seat!' he says, as spit flies out of his mouth and onto your cheek.");
             Console.WriteLine("What do you do?");
             Console.WriteLine("1. Punch him right in the kisser.");
-            Console.WriteLine("2. Blow his mind with a magic display.'");
+            Console.WriteLine("2. Blow his mind with a magic display.");
             Console.WriteLine("3. Pee a little bit.'");
             Console.Write("Choice: ");
             choice = Console.ReadLine().ToLower();
@@ -194,9 +194,8 @@ namespace CocoTextAdventureGameOfTheYearAddition
             Console.Clear();
             gameTitle();
         }
-
     }
-    class Dice
+    public class Dice
     {
 
     }
